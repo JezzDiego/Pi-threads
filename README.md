@@ -18,5 +18,5 @@ gcc -o bin/pi-threads pi-threads.c -pthread -lm
 Then, run the generated file looking for the execution time.
 
 ````shell
-time ./pi
+time ./bin/pi-threads
 ````
