@@ -20,3 +20,14 @@ Then, run the generated file looking for the execution time.
 ````shell
 time ./bin/pi-threads
 ````
+
+## Questões
+
+1. As threads implementadas são preemptivas ou cooperativas? Explique sua resposta.
+
+2. Que modelo de threads o sistema operacional que você usou implementa (N:1, 1:1 ou N:M)? Como isso pode ser deduzido a partir dos experimentos?
+   > O Modelo de Threads utilizada no sistema operacional que utilizamos (O Unix Ubuntu 22.04), é conhecido como NPTL (Native POSIX Thread library). O NPTL é uma biblioteca de Threads 1:1, onde nesse modelo, cada thread de usuário possui uma       thread correspondente no núcleo
+   
+   >Criação e Observação de Threads:
+    Crie um programa em C ou Python que crie várias threads.
+    Use a ferramenta top ou htop para observar a criação de threads no sistema. Com o modelo 1:1, você verá que para cada thread de usuário criada, uma nova thread aparece listada no top ou htop.
