@@ -24,8 +24,11 @@ time ./bin/pi-threads
 ## Questões
 
 1. As threads implementadas são preemptivas ou cooperativas? Explique sua resposta.
+   
+   >As threads criadas com a biblioteca pthreads (POSIX threads) em C são preemptivas. Isso significa que o escalonador do sistema operacional pode interromper a execução de uma thread em qualquer momento para dar lugar à execução de outra thread, com base em critérios de prioridade e tempo de execução, entre outros fatores.
+   >O comportamento preemptivo permite que o sistema operacional distribua de maneira mais equitativa os recursos da CPU entre as várias threads, aumentando a responsividade e a eficiência do sistema, especialmente em sistemas multitarefa.
 
-2. Que modelo de threads o sistema operacional que você usou implementa (N:1, 1:1 ou N:M)? Como isso pode ser deduzido a partir dos experimentos?
+3. Que modelo de threads o sistema operacional que você usou implementa (N:1, 1:1 ou N:M)? Como isso pode ser deduzido a partir dos experimentos?
    > O Modelo de Threads utilizada no sistema operacional que utilizamos (O Unix Ubuntu 22.04), é conhecido como NPTL (Native POSIX Thread library). O NPTL é uma biblioteca de Threads 1:1, onde nesse modelo, cada thread de usuário possui uma       thread correspondente no núcleo
    
    >Criação e Observação de Threads:
